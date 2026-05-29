@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de idade Simples</title>
+    <style>
+        .container{
+           
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            margin: 20px ;
+            padding: 20px;
+        }
+        .calculadorasNascimento{
+            background-image: url(nascimento.jpeg);
+            background-size: cover;
+            height: 80px;
+            width: 600px;
+            color: white;
+            font-size: 20px;
+            > input {
+                font-size: 20px;
+            }
+           > select{
+                font-size: 20px;
+                
+            }  
+        }
+        .calculadorasNumero{
+            background-image: url(images.jpeg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-size: cover;
+            height: 80px;
+            width: 600px;
+        }
+        .botao{
+            display:flex; 
+            justify-content: center; 
+            margin-top: 30px; 
+            height: 30px;
+        }
+        #resultador {
+                    border-top: 3px solid red;
+                    border-right: 1px dashed blue;
+                    border-bottom: 3px solid green;
+                    border-left: 1px dotted purple;
+                    font-size: 20px;
+                    color: blue;
+                    margin: 10px;
+                    height: 30px;
+                    padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <label for="ano">Ano de Nascimento:</label>
+        <input type="number" name="ano" id="anoNascimento" min="1900" max="2026">
+        <button onclick="calculaIdade()">Calcular</button>
+    </div>
+
+    <div id="resultador">
+
+    </div>
+    <div style="display: flex; justify-content: center; flex-direction: column;">
+    <div  class="calculadorasNascimento container">
+        <label for="dtNascimento">Dia:</label>
+        <input id="dia" type="number" min="1" max="31">
+        <label for="mes">Mês:</label>
+        <select id="mes">
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+
+        </select>
+        <label for="ano">Ano:</label>
+        <input id="ano" type="number" name="ano" id="Ano" min="1900">
+        <div style="margin-top: 30px; " >
+            <button style=" height: 100%; width: 100%;" onclick="calcularIdadeCompleta()">Calcular</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container calculadorasNascimento calculadorasNumero">
+        <div>
+        <input id="n1" type="number">
+        <select name="operacao" id="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input id="n2" type="number">
+        </div>
+        <div>
+        <div style="margin-top: 30px; " >
+            <button style=" height: 100%; width: 100%;" onclick="calcularNumerica()">Calcular</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
