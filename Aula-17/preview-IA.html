@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para Estágio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <h1>Inscrição para Vagas de Estágio</h1>
+        <p>Preencha os dados abaixo para participar do processo seletivo.</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Dados do candidato</h2>
+
+            <form action="/inscricoes/estagio"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                <div>
+                    <label for="nome">Nome completo:</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        autocomplete="name"
+                        required
+                        minlength="3"
+                        maxlength="100"
+                        placeholder="Digite seu nome completo">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        maxlength="254"
+                        placeholder="exemplo@email.com">
+                </div>
+
+                <div>
+                    <label for="celular">Celular:</label>
+                    <input
+                        type="tel"
+                        id="celular"
+                        name="celular"
+                        autocomplete="tel"
+                        required
+                        minlength="10"
+                        maxlength="20"
+                        placeholder="(27) 99999-9999">
+                </div>
+
+                <div>
+                    <label for="area">Área de interesse:</label>
+                    <select
+                        id="area"
+                        name="area"
+                        required>
+                        <option value="">Selecione uma área</option>
+                        <option value="tecnologia">Tecnologia da Informação</option>
+                        <option value="administracao">Administração</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="rh">Recursos Humanos</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="outros">Outras áreas</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="curriculo">Currículo em PDF:</label>
+                    <input
+                        type="file"
+                        id="curriculo"
+                        name="curriculo"
+                        accept=".pdf,application/pdf"
+                        required>
+                    <p>Envie seu currículo em formato PDF.</p>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="consentimento"
+                        name="consentimento"
+                        value="sim"
+                        required>
+                    <label for="consentimento">
+                        Li o aviso de privacidade e consinto com o
+                        tratamento dos meus dados pessoais para fins
+                        de participação neste processo seletivo,
+                        conforme a LGPD.
+                    </label>
+                </div>
+
+                <button type="submit">Enviar inscrição</button>
+                <button type="reset">Limpar formulário</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Processo seletivo de estágio.</p>
+    </footer>
+</body>
+</html>
