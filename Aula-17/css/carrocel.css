@@ -1,0 +1,83 @@
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eef2f6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    min-height: 100vh;       /* Garante que o body ocupe a tela inteira */
+    padding: 20px;
+}
+
+#carrossel-card {
+    width: 100%;
+    max-width: 650px;
+    background-color: #0f507d;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.container {
+    width: 100%;
+    height: 380px; /* Altura fixa para o carrossel não ficar pulando de tamanho */
+    background-color: #093554;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o quadro sem distorcer */
+    transition: opacity 0.4s ease-in-out;
+}
+
+#legenda {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#controles {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    width: 100%;
+}
+
+button {
+    flex: 1; /* Faz os dois botões terem exatamente a mesma largura */
+    background: #1364a1;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: #ffffff;
+    color: #0f507d;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
